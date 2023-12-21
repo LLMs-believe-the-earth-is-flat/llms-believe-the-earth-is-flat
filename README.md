@@ -31,7 +31,7 @@ The questions in BoolQ are all Yes/No questions. From the data sample, we first 
 The "target" is a negation for the original "answer". We generate the "control" statement based on the "target", along with a set of appeal passages generated using 3 different persuasion strategies: "logical", "credibility" and "emotional". Each strategy has 3 different kind of appeals.
 
 
-Data sample as a Glance:
+Data sample at a glance:
 
 ~~~
 {
@@ -68,7 +68,7 @@ The questions in NQ1 are questions with short answers. Similar to the BoolQ data
 Another "mcq" field is added inside the "adv" for NQ questions. The "mcq" field include all the options with corresponding scores (1: correct option; 0 and 2: wrong options; 2: easy misselection).
 
 
-Data sample as a Glance:
+Data sample at a glance:
 
 ```
 {
@@ -111,7 +111,7 @@ The questions in NQ2 are also questions with short answers. The approach of sett
 
 
 
-Data sample as a Glance:
+Data sample at a glance:
 
 ```
 {
