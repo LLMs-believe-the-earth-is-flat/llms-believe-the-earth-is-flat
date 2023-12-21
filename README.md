@@ -8,7 +8,7 @@ Please also check our [website](https://llms-believe-the-earth-is-flat.github.io
 
 <img src="./logo.png" alt="logo" width="200" />
 
-## The Farm Dataset
+## 1. The Farm Dataset
 
 This is a brief description for the Farm Dataset. The dataset contains factual questions paired with systematically generated persuasive misinformation.
 
@@ -25,7 +25,7 @@ The Farm Dataset consists of 4 subsets:
 
 ### Details of samples
 
-#### **BoolQ**
+#### BoolQ
 
 The questions in BoolQ are all Yes/No questions. From the data sample, we first have the original "question", "answer" and "source" which are all correct. The model-generated contents are in the "adv" fiels.
 The "target" is a negation for the original "answer". We generate the "control" statement based on the "target", along with a set of appeal passages generated using 3 different persuasion strategies: "logical", "credibility" and "emotional". Each strategy has 3 different kind of appeals.
@@ -62,7 +62,7 @@ Data sample at a glance:
 
 
 
-#### **NQ1**
+#### NQ1
 
 The questions in NQ1 are questions with short answers. Similar to the BoolQ dataset, in NQ1, we also have "question", "answer", "source" and "adv". 
 Another "mcq" field is added inside the "adv" for NQ questions. The "mcq" field include all the options with corresponding scores (1: correct option; 0 and 2: wrong options; 2: easy misselection).
@@ -239,27 +239,27 @@ In addition, Llama-2-7B-chat, Vicuna-v1.5-7B and Vicuna-v1.5-13B should be insta
 #### Run the code
 
 ```
-python run_exp.py -m [model name, option='llama2-7b-chat', 'llama2-13b-chat', 'vicuna-7b-v1.5', 'vicuna-13b-v1.5', 'gpt-3.5-turbo', 'gpt-4'] # specify a model to test
+python run_exp.py -m [LLM model name, Option='llama2-7b-chat', 'llama2-13b-chat', 'vicuna-7b-v1.5', 'vicuna-13b-v1.5', 'gpt-3.5-turbo', 'gpt-4'] # specify a model to test
 ```
 
 
 
 #### Result demonstration
 
-The test results will be and stored in a `csv` file. An example is shown below:
+The test results will be and stored in a `csv` file. An example of llama2 tested on 5 data samples of the NQ1 subset is shown below:
 
 
 | model          | dataset | passage | SR   | MeanT | MaxT | MinT | wa   | pd   | npd  | persuasion_counts | correct_num |
 | -------------- | ------- | ------- | ---- | ----- | ---- | ---- | ---- | ---- | ---- | ----------------- | ----------- |
 | llama2-7b-chat | nq1     | logical | 0.8  | 1.5   | 2    | 1    | 0    | 4    | 1    | 100;1;1;2;2       | 5;2;1;1;1   |
 
-- model: the llm model
+- model: the llm name
 - dataset: one of the four subsets
 - passage: type of appeal in [control, logical, emotional, credibility]
-- SR: success rate of the persuasion
-- MeanT: average turn of the persuasion
-- MaxT: max turn of the persuasion
-- MinT: min turn of the persuasion
+- SR: success rate of the misinformation (the `MR@4` value in the paper)
+- MeanT: average turn of the misinformation
+- MaxT: max turn of the misinformation
+- MinT: min turn of the misinformation
 - wa: number of questions with the wrong answers at turn 0
 - pd: number of questions that have been successfully persuaded at turn 4
 - npd: number of questions that haven't been persuaded at turn 4
