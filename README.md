@@ -168,7 +168,7 @@ The approach of setting the "target" is similar with the approach in NQ2, where 
 
 
 
-Data sample as a Glance :
+Data sample at a Glance :
 
 ```
 {
