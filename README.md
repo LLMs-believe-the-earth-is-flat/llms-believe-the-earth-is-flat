@@ -6,6 +6,8 @@ This is the official dataset repo of [The Earth is Flat because...: Investigatin
 
 Please also check our [website](https://llms-believe-the-earth-is-flat.github.io)!
 
+<img src="./logo.png" alt="logo" style="zoom:25%;" />
+
 ## The Farm Dataset
 
 This is a brief description for the Farm Dataset. The dataset contains factual questions paired with systematically generated persuasive misinformation.
