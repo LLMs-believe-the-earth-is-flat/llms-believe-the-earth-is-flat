@@ -6,7 +6,7 @@ This is the official dataset repo of [The Earth is Flat because...: Investigatin
 
 Please also check our [website](https://llms-believe-the-earth-is-flat.github.io)!
 
-<img src="./logo.png" alt="logo" style="zoom:25%;" />
+<img src="./logo.png" alt="logo" width="200" />
 
 ## The Farm Dataset
 
