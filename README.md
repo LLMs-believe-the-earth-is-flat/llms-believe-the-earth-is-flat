@@ -1,10 +1,10 @@
 # The Earth is Flat because...: Investigating LLMs' Belief towards Misinformation via Persuasive Conversation
 
----
+
 
 This is the official dataset repo of [The Earth is Flat because...: Investigating LLMs' Belief towards Misinformation via Persuasive Conversation](https://arxiv.org/abs/2312.09085).
 
-Please also check our [website](https://llms-believe-the-earth-is-flat.github.io)!
+*Please also check our [**project page**](https://llms-believe-the-earth-is-flat.github.io)!*
 
 <img src="./logo.png" alt="logo" width="200" />
 
@@ -227,7 +227,7 @@ Data sample at a Glance :
 }
 ```
 
-## 2. Running the test
+## 2. Quick start
 
 In `run_exp.py`, we use the data in Farm dataset and simulate the persuasion process to misinform five popular LLMs including 2 closed-source ones, ChatGPT and GPT-4, and 3 open-source instruction-tuned ones, including Llama-2-7B-chat, Vicuna-v1.5-7B and Vicuna-v1.5-13B. 
 
@@ -236,7 +236,7 @@ In `run_exp.py`, we use the data in Farm dataset and simulate the persuasion pro
 In order to run the code, one must prepare the openai `api_base` and `api_key` for OpenAI models. 
 In addition, Llama-2-7B-chat, Vicuna-v1.5-7B and Vicuna-v1.5-13B should be installed via huggingface, and the relative paths in the code should also be changed for proper usage.
 
-#### Run the code
+#### Run the test
 
 ```
 python run_exp.py -m [LLM model name, Option='llama2-7b-chat', 'llama2-13b-chat', 'vicuna-7b-v1.5', 'vicuna-13b-v1.5', 'gpt-3.5-turbo', 'gpt-4'] # specify a model to test
@@ -267,10 +267,15 @@ The test results will be and stored in a `csv` file. An example of llama2 tested
 - correct_num: number of correct response by the llm in each turn (from turn 0 to turn 4)
 
 
+## Contributors
 
+Main contributors of the Farm dataset and code are:
 
-## If you find our project useful, please cite:
+[Rongwu Xu](https://rongwuxu.site), [Brian S. Lin](https://github.com/Brian-csh), [Shujian Yang](https://github.com/thomasyyyoung), and [Tianqi Zhang](https://github.com/destiny718).
 
+## Citation
+
+If you find our project useful, please consider citing:
 ```
 @misc{xu2023earth,
     title={The Earth is Flat because...: Investigating LLMs' Belief towards Misinformation via Persuasive Conversation},
@@ -281,3 +286,7 @@ The test results will be and stored in a `csv` file. An example of llama2 tested
     primaryClass={cs.CL}
 } 
 ```
+
+## Contact
+
+If you have any problems regarding the dataset, code or the project itself, please feel free to open an issue or contact with [Rongwu](rongwuxu@outlook.com) directly :)
