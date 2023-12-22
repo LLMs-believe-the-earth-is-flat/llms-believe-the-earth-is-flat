@@ -4,7 +4,7 @@
 
 This is the official dataset repo of [The Earth is Flat because...: Investigating LLMs' Belief towards Misinformation via Persuasive Conversation](https://arxiv.org/abs/2312.09085).
 
-*Please also check our [**project page**](https://llms-believe-the-earth-is-flat.github.io)!*
+*Please also check out our [**project page**](https://llms-believe-the-earth-is-flat.github.io)!*
 
 <img src="./logo.png" alt="logo" width="200" />
 
@@ -231,17 +231,24 @@ Data sample at a Glance :
 
 In `run_exp.py`, we use the data in Farm dataset and simulate the persuasion process to misinform five popular LLMs including 2 closed-source ones, ChatGPT and GPT-4, and 3 open-source instruction-tuned ones, including Llama-2-7B-chat, Vicuna-v1.5-7B and Vicuna-v1.5-13B. 
 
-#### Preparation of LLMs
+#### Prepare the environments
 
-In order to run the test for OpenAI LLMs, one must prepare the openai `api_base` and `api_key` in the provided script. 
+The required Python environment for running the test can be installed via the `requirements.txt` file.
+```
+conda create --name test_env --file requirements.txt
+conda activate test_env
+```
+
+#### Prepare the LLMs
+
+In order to run the test for OpenAI LLMs, one must set the openai `api_base` and his/her `api_key` in the provided script. 
 In addition, the script also support open-sourced LLMs, e.g., Llama-2-7B-chat, Vicuna-v1.5-7B and Vicuna-v1.5-13B. Those models can be installed via huggingface, and the relative paths in the code should be set for running the test.
 
 #### Run the test
 
 ```
-python run_exp.py -m [LLM model name, Option='llama2-7b-chat', 'llama2-13b-chat', 'vicuna-7b-v1.5', 'vicuna-13b-v1.5', 'gpt-3.5-turbo', 'gpt-4'] # specify a model to test
+python run_exp.py -m gpt-4 # specify a model to test
 ```
-
 
 
 #### Result demonstration
