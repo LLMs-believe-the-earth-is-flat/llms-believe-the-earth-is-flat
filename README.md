@@ -6,7 +6,7 @@ This is the official dataset repo of [The Earth is Flat because...: Investigatin
 
 *Please also check out our [**project page**](https://llms-believe-the-earth-is-flat.github.io)!*
 
-<img src="./logo.png" alt="logo" width="200" />
+<img src="./figures/logo.png" alt="logo" width="200" />
 
 ## 1. The Farm Dataset
 
@@ -229,7 +229,7 @@ Data sample at a Glance :
 
 ## 2. Quick Start
 
-In `run_exp.py`, we use the data in Farm dataset and simulate the persuasion process to misinform five popular LLMs including 2 closed-source ones, ChatGPT and GPT-4, and 3 open-source instruction-tuned ones, including Llama-2-7B-chat, Vicuna-v1.5-7B and Vicuna-v1.5-13B. 
+In `src/run_exp.py`, we use the data in Farm dataset and simulate the persuasion process to misinform five popular LLMs including 2 closed-source ones, ChatGPT and GPT-4, and 3 open-source instruction-tuned ones, including Llama-2-7B-chat, Vicuna-v1.5-7B and Vicuna-v1.5-13B. 
 
 #### Prepare the environments
 
@@ -247,6 +247,7 @@ In addition, the script also support open-sourced LLMs, e.g., Llama-2-7B-chat, V
 #### Run the test
 
 ```
+cd src
 python run_exp.py -m gpt-4 # specify a model to test
 ```
 
