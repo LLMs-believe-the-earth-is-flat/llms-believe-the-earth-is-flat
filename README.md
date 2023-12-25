@@ -17,9 +17,9 @@ This is the official dataset repo for the paper [The Earth is Flat because...: I
 
 ## 1. The Farm Dataset
 
-This is a brief description of the Farm Dataset. The dataset contains factual questions paired with systematically generated persuasive misinformation.
+The Farm dataset contains factual questions paired with systematically generated persuasive misinformation.
 
-To see the misinformation results using different persuasion strategies and different sub-datasets, the python script `run_exp.py`, along with the Farm Dataset, can be used. 
+To see the misinformation results using different persuasion strategies and different sub-datasets from the Farm Dataset, run the python script `run_exp.py`. 
 
 
 ### Overview
@@ -34,7 +34,7 @@ The Farm Dataset consists of 4 subsets:
 
 #### BoolQ
 
-The questions in BoolQ are all Yes/No questions. Each of the data sample contains the original question, answer, and source in the corresponding fields. The model-generated contents are in the "adv" fields.
+The BoolQ subset consists of Yes/No questions. Each of the data sample contains the original question, answer, and source in the corresponding fields. The model-generated contents are in the "adv" fields.
 The "target" is a negation of the original "answer". The "control" is a statement based on the "target". Furthermore, "logical", "credibility", and "emotional" contain a set of appeal passages generated using 3 different persuasion strategies. Each strategy has 3 different appeal passages.
 
 
@@ -71,8 +71,8 @@ Data sample at a glance:
 
 #### NQ1
 
-The NQ1 consists of short answer questions. Similar to the BoolQ dataset, in NQ1, each data sample also includes "question", "answer", "source", and "adv" fields. 
-Another "mcq" field is added inside the "adv" for NQ questions. The "mcq" field includes all the options and their corresponding scores (1: correct option; 0 and 2: wrong options; 2: easy misselection).
+The NQ1 consists of short answer questions. Similar to the BoolQ subset, in NQ1, each data sample also includes "question", "answer", "source", and "adv" fields. 
+However, another "mcq" field is added inside the "adv" for NQ questions. The "mcq" field includes all the options for multiple choice and their corresponding scores (1: correct option; 0 and 2: wrong options; 2: easy misselection).
 
 
 Data sample at a glance:
@@ -114,7 +114,7 @@ Data sample at a glance:
 
 #### NQ2
 
-The NQ2 also consists of short answer questions. The approach to obtain the "target" in "adv" is different from NQ1, where we let the LLM pick the easy misselection (score==2) in the generated mcq.
+The NQ2 also consists of short answer questions. The main difference from NQ1 is that the approach used to generate the "target" in "adv" is to let the LLM pick the easy misselection (score==2) in the generated mcq.
 
 Data sample at a glance:
 
@@ -168,8 +168,7 @@ Data sample at a glance:
 
 #### TruthfulQA
 
-The questions in TruthfulQA have long answers. 
-The approach of setting the "target" is similar with the approach in NQ2, where we let the LLM pick the most “appropriate” incorrect option from a set of choices in the MCQ as "target" according to the options in "mcq".
+The TruthfulQA subset consists of long answer questions. The approach for generating "target" is similar to that of NQ2, where we let the LLM pick the most “appropriate” incorrect option from a set of choices in the "mcq".
 
 Data sample at a Glance :
 
