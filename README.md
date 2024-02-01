@@ -299,4 +299,4 @@ If you find our project useful, please consider citing:
 
 ## Contact
 
-If you have any problems regarding the dataset, code, or the project itself, please feel free to open an issue or contact [Rongwu](mailto:rongwuxu@outlook.com) directly :)
+If you have any problems regarding the dataset, code, or the project itself, please feel free to open an issue or contact [Rongwu](mailto:0xrwxu@gmail.com) directly :)
