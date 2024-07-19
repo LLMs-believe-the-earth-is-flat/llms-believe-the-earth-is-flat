@@ -49,7 +49,7 @@ The Farm Dataset consists of 4 subsets:
 #### BoolQ
 
 The BoolQ subset consists of Yes/No questions. Each of the data sample contains the original question, answer, and source in the corresponding fields. The model-generated contents are in the "adv" fields.
-The "target" is a negation of the original "answer". The "control" is a statement based on the "target". Furthermore, "logical", "credibility", and "emotional" contain a set of appeal passages generated using 3 different persuasion strategies. Each strategy has 3 different appeal passages.
+The "target" is a negation of the original "answer". The "control" is a statement based on the "target". Furthermore, "logical", "credibility" and "emotional" contain a set of appeal passages generated using 3 different persuasion strategies. Each strategy has 3 different appeal passages.
 
 
 Data sample at a glance:
@@ -85,7 +85,7 @@ Data sample at a glance:
 
 #### NQ1
 
-The NQ1 consists of short answer questions. Similar to the BoolQ subset, in NQ1, each data sample also includes "question", "answer", "source", and "adv" fields. 
+The NQ1 consists of short answer questions. Similar to the BoolQ subset, in NQ1, each data sample also includes "question", "answer", "source" and "adv" fields. 
 However, another "mcq" field is added inside the "adv" for NQ questions. The "mcq" field includes all the options for multiple choice and their corresponding scores (1: correct option; 0 and 2: wrong options; 2: easy misselection).
 
 
